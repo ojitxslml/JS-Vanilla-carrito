@@ -73,7 +73,7 @@ if(total>0){
 
 
 const btnAumentar = (e) =>{
-    console.log("me diste click ",e.target.dataset.id);
+    console.log("me diste click xd",e.target.dataset.id);
     
 }
 const btnDisminuir = (e) =>{
