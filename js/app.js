@@ -74,8 +74,20 @@ if(total>0){
 
 const btnAumentar = (e) =>{
     console.log("me diste click xd",e.target.dataset.id);
-    
-}
+    console.log("me diste click ",e.target.dataset.id);
+    carritoObjeto = carritoObjeto.filter(item =>{
+        if(item.id == e.target.dataset.id){
+                if(item.cantidad>0){
+                    item.cantidad++
+                    return item
+                }
+        }else{
+            return item
+        }
+    });
+    pintarCarrito();
+};
+
 const btnDisminuir = (e) =>{
     console.log("me diste click ",e.target.dataset.id);
     carritoObjeto = carritoObjeto.filter(item =>{
